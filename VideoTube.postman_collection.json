@@ -1,0 +1,1116 @@
+{
+	"info": {
+		"_postman_id": "2f8996f1-3f0e-4917-b299-e38d46df781a",
+		"name": "VideoTube",
+		"description": "VideoTube",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32176900"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullname",
+									"value": "Rohan shah",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "codewithrohan",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "postman-cloud:///1ef5fa31-3661-45a0-8123-23a223b0a819"
+								},
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "postman-cloud:///1ef5fa47-8d31-4770-b40e-1f3c6f054c06"
+								},
+								{
+									"key": "email",
+									"value": "rohanc@.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/register?fullname",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"register"
+							],
+							"query": [
+								{
+									"key": "fullname",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"riya@.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-access-token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/users/refresh-access-token",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"refresh-access-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"123456\",\r\n    \"newPassword\": \"145236\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/change-password",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-account-details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\": \"Shubham Chuhan\",\r\n    \"email\": \"Shubham@123.gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/update-account-details",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"update-account-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-currrent-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/users/get-currrent-user",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"get-currrent-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-avatar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "postman-cloud:///1ef5fa32-6d22-4930-8988-92a9c28d79ca"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/update-avatar",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"update-avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-coverImage",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "postman-cloud:///1ef5fa31-3661-45a0-8123-23a223b0a819"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/users/update-coverImage",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"update-coverImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-watch-history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/users/watch-history",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"watch-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-pofile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/users/channel/nirbahy34",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"channel",
+								"nirbahy34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HealthCheck",
+			"item": [
+				{
+					"name": "healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/healthcheck",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"healthcheck"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Video",
+			"item": [
+				{
+					"name": "get-A-video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/videos/66d1dbb63221c1eaea026fd2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"66d1dbb63221c1eaea026fd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllVideos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/videos?query=%2Fsmall%7CGhanshyam%2Fi&sortBy=createdAt&sortType=asc&userId=66d1a8882fd34eb4a858c35d",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "%2Fsmall%7CGhanshyam%2Fi"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sortType",
+									"value": "asc"
+								},
+								{
+									"key": "userId",
+									"value": "66d1a8882fd34eb4a858c35d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "publish-video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "My photo",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is my photo",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "postman-cloud:///1ef66db2-ebb9-4110-82a6-7281743838e7"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "postman-cloud:///1ef5fa31-3661-45a0-8123-23a223b0a819"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/videos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "My photo",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "videoFile",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "thumbnail",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update-video-details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "postman-cloud:///1ef6729b-ce1c-4f10-b29c-abc0764e22d2"
+								},
+								{
+									"key": "description",
+									"value": "safbsnfvhsvcfsb ukbhfcbcegnfugee inicf12312",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "photo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/videos/66d258f5e935e55552ff9d60",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"66d258f5e935e55552ff9d60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete-video",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/videos/66d1dbb63221c1eaea026fd2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"66d1dbb63221c1eaea026fd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggel-isPublished",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/videos/toggle/publish/66d2376d92df3b386089c5e2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"toggle",
+								"publish",
+								"66d2376d92df3b386089c5e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "increment-video-view",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/videos/66d2376d92df3b386089c5e2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"66d2376d92df3b386089c5e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-to-watchHistrory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/videos//watch-history/66d24c4381a663dd2d631601",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"videos",
+								"",
+								"watch-history",
+								"66d24c4381a663dd2d631601"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "add-comments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"heyyyy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/comments/66d2376d92df3b386089c5e2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"66d2376d92df3b386089c5e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/comments/66d1a8882fd34eb4a858c35d?page =1&limit=10",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"66d1a8882fd34eb4a858c35d"
+							],
+							"query": [
+								{
+									"key": "page ",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/comments/c/66d31787b0af27530582b49e",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"66d31787b0af27530582b49e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-comment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"jay Swaminarayan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/comments/c/66d317b3b0af27530582b4a1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"comments",
+								"c",
+								"66d317b3b0af27530582b4a1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "get-channel-states",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/dashboard/stats",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"dashboard",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-channel-all-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/dashboard/videos/?sortBy=createdAt&sortType=asc&page=1&limit=10&channel=66d1a8882fd34eb4a858c35d",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"dashboard",
+								"videos",
+								""
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sortType",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "channel",
+									"value": "66d1a8882fd34eb4a858c35d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tweet",
+			"item": [
+				{
+					"name": "create tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"hello, this is first comment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/tweets",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/tweets/user/66d1a8882fd34eb4a858c35d",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								"user",
+								"66d1a8882fd34eb4a858c35d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-tweet",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"jay swaminaryan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/tweets/66d42c5bb12bb6c4f6a0831d",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								"66d42c5bb12bb6c4f6a0831d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tweet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/tweets/66d42c59b12bb6c4f6a0831a",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"tweets",
+								"66d42c59b12bb6c4f6a0831a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "like",
+			"item": [
+				{
+					"name": "toggel-video-like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/likes/toggle/v/66d2376d92df3b386089c5e2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"v",
+								"66d2376d92df3b386089c5e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggel-comment-like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/likes/toggle/c/66d317b3b0af27530582b4a1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"c",
+								"66d317b3b0af27530582b4a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toggel-tweet-like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/likes/toggle/t/66d42c5cb12bb6c4f6a08320",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"toggle",
+								"t",
+								"66d42c5cb12bb6c4f6a08320"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-liked-video-by-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/likes/videos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"likes",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subsciptions",
+			"item": [
+				{
+					"name": "toggle-subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/subscriptions/c/66c604a1532e95b675b4e9a2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"66c604a1532e95b675b4e9a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-Subscribed-Channels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/subscriptions/u/66c604a1532e95b675b4e9a2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"subscriptions",
+								"u",
+								"66c604a1532e95b675b4e9a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-User-Channel-Subscribers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/subscriptions/c/66c604a1532e95b675b4e9a2",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"subscriptions",
+								"c",
+								"66c604a1532e95b675b4e9a2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "playlist",
+			"item": [
+				{
+					"name": "create playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Nirbhay\",\r\n    \"description\":\"Hello, my name is nirbhay.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/playlist",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlist"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "nirbhay",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-playlist-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/playlist/66d6287ddb0493b39bfb157b",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlist",
+								"66d6287ddb0493b39bfb157b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-details-of-playlist",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jaydeep\",\r\n    \"description\": \"my name is jaydeep.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/playlist/66d6287ddb0493b39bfb157b",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlist",
+								"66d6287ddb0493b39bfb157b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-playlist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/playlist/66d629837103002026a2b887",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"playlist",
+								"66d629837103002026a2b887"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
