@@ -43,6 +43,6 @@ This is a backend application that replicates key features of YouTube, such as v
    ```bash
    npm start
    ```
-   The server will run on `http://localhost:5000`.
+   The server will run on `http://localhost:8000`.
 
 -[Model link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)
